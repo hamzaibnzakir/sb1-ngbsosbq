@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --matrix-black: #0d0d0d;
+  --cyber-green: #00ff41;
+  --terminal-gray: #1a1a1a;
+  --neon-accent: #39ff14;
+}
+
+body {
+  @apply bg-[#0d0d0d] text-white;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='none' stroke='%2339ff14' stroke-width='2'/%3E%3C/svg%3E"), auto;
+}
+
+::selection {
+  background-color: var(--cyber-green);
+  color: var(--matrix-black);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--matrix-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cyber-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-accent);
+}
